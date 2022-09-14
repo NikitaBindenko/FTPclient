@@ -1,0 +1,2 @@
+Main-Class: src.main.java.ftp.Main
+class-path: bin/

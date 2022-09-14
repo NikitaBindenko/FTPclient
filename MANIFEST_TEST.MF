@@ -1,0 +1,2 @@
+Main-Class: src.test.java.unit.MainTest
+class-path: bin/ lib/jcommander-1.78.jar lib/jquery-3.5.1.jar lib/testng-7.4.0.jar
