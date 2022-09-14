@@ -1,9 +1,12 @@
-Для сборки FTP-клиента необходимо выполнить следующие команды из директории проекта:
+**Для сборки FTP-клиента необходимо выполнить следующие команды из директории проекта:**
 
-javac src/main/java/ftp/*.java -d bin
-jar -cvmf MANIFEST.MF ftpClient.jar bin
 
-Запуск приложения: java -jar ftpClient.jar [login] [password] [ip]
+`javac src/main/java/ftp/*.java -d bin`
+
+`jar -cvmf MANIFEST.MF ftpClient.jar bin`
+
+**Запуск приложения:**
+`java -jar ftpClient.jar [login] [password] [ip]`
 
 При входе необходимо ввести коррекное имя файла, с которым предстоит работать.
 После ввода имени файла перед пользователем появится список команд для работы с указанным файлом,
@@ -11,19 +14,23 @@ jar -cvmf MANIFEST.MF ftpClient.jar bin
 Для выполнения команды нужно ввести число, соответствующее команде. Дополнительные входные данные будут запрашиваться
 программой в зависимости от выполняемых команд.
 
-Примеры работы программы:
+**Примеры сборки и работы программы:**
+
+![изображение](https://user-images.githubusercontent.com/62245709/190262697-8b3f81ea-8ca7-4cee-8ef1-0f2c79c9a3cc.png)
 
 
 
 
-Для сборки тестов нужно выполнить:
+**Для сборки тестов нужно выполнить:**
 
-javac -cp lib/jcommander-1.78.jar:lib/testng-7.4.0.jar:jquery-3.5.1.jar:ftpClient.jar -sourcepath src/test/java/unit/*.java -d bin
-jar -cvmf MANIFEST_TEST.MF ftpTest.jar bin/src/test
+`javac -cp lib/jcommander-1.78.jar:lib/testng-7.4.0.jar:jquery-3.5.1.jar:ftpClient.jar -sourcepath src/test/java/unit/*.java -d bin`
 
-Запуск тестов: java -jar ftpClient.jar [online/offline]
+`jar -cvmf MANIFEST_TEST.MF ftpTest.jar bin/src/test`
 
-Параметр [online/offline] определяет, какую группу тестов запустить. При отсутствии параметра запускаются тесты группы offline.
+**Запуск тестов:**
+`java -jar ftpClient.jar [online/offline]`
+
+Параметр `[online/offline]` определяет, какую группу тестов запустить. При отсутствии параметра запускаются тесты группы offline.
 
 Тесты группы offline тестируют методы сущностей и взаимодействие частей программы между собой на стороне клиента.
 
@@ -34,5 +41,7 @@ jar -cvmf MANIFEST_TEST.MF ftpTest.jar bin/src/test
 
 Во время разработки использовался FTP-сервер vsFTPd 3.0.3, однако клиент работоспособен и с другими решениями.
 
-Пример сборки и запуска тестов:
+**Пример сборки и запуска тестов:**
+
+![изображение](https://user-images.githubusercontent.com/62245709/190262872-d6303bdd-346b-4bf8-bd36-5fbfbc52a293.png)
 
